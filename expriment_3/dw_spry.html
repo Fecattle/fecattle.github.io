@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>测试</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+		body{
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+		}
+        .top-container{
+            background-color: #93EC83;
+            height:30px;
+           // min-width: 1500px;
+            height: 60px; 
+            margin: 0;
+         
+			display: flex;
+			//justify-content: center;
+        }
+        .nav{
+            display: inline-block;
+            margin:0 auto;
+            padding:0;
+            position: relative;
+			
+        }
+
+        .nav:after{
+            content:"";
+            display:block;
+            clear:both;
+            visibility: hidden;
+            width:0px;
+            height:0px;
+        }
+
+        .nav ul ,.nav li{
+            display: block;
+            position: relative;
+            margin:0px;
+            padding:0px;
+        }
+
+        .nav a{
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            margin:0 auto;
+        }
+
+        .first-nav{
+                float: left;
+                text-align:center;
+                display: block;
+                margin:0 auto;
+        }
+
+        .sec-nav{
+                position: relative;
+                display: none;
+                text-align:center;
+				line-height: 100px;
+				background: yellowgreen;
+				
+        }
+        .top-left-nav .first-nav{
+          /*显示具体布局*/
+            width:130px;
+			
+        }
+        .top-left-nav  .sec-nav{
+            margin:0px;
+            display: none;
+            line-height: 40px;
+            width: 150px;
+        }
+		.third-nav{
+			display: none;
+		}
+        .top-left-nav .first-nav:hover .sec-nav{
+            display: block;    
+        }
+		.top-left-nav .first-nav:hover .third-nav{
+			display:none;
+		}
+		.top-left-nav .sec-nav li:hover .third-nav{
+			display: block;
+			position: absolute;
+		}
+		.top-left-nav .first-nav:hover{
+       		background-color: #93EC83;
+        }
+		.top-left-nav .sec-nav li:hover{
+       		background-color: #93EC83;
+        }
+		.top-left-nav .sec-nav .third-nav li:hover{
+			background: #93EC83;
+		}
+		.dropdown.first-nav{
+			background-color: #93EC83;
+			color: white;
+			font-size: 20px;
+			width: 150px;
+			line-height: 60px;
+			font-weight: 500;
+			
+		}
+		a{
+			color: aliceblue;
+			
+			font-size: 17px;
+			font-weight: 550;
+		}
+		.third-nav{
+			font-size: 14px;
+			font-weight: 550;
+			width: 140px;
+			line-height: 30px;
+			color: white;
+			display: none;
+			left:150px;
+			top: 0;
+			background:#93EC83;
+		}
+		.logo{
+			margin-left: 40px;
+		}
+    </style>
+  </head>
+  <body style="margin:0;background-color: linen">
+        <!--导航栏一般需要一个容器，设置width:100%适应浏览器的大小变化-->
+ 
+   <div  class="top-container container">
+     <!--导航栏wrapper一般设置一个固定大小这样子可以通过margin:auto;实现导航栏水平居中
+     由于顶层容器是适应浏览器变化宽度，所以可以保持水平导航栏自适应浏览器窗口宽度保持居中-->
+      <div class="nav top-left-nav">
+        <!--开始实现列表-->
+       <ul>
+		   <li class="dropdown first-nav"><span>学校概况<i class="icon icon-arrow"></i></span>
+			 <ul class="sec-nav">
+			  <li><a href="#">学校简介</a></li>
+			  <li><a href="#">学校章程</a></li>
+			  <li><a href="#">历史沿革·</a>
+				 <ul class="third-nav">
+					 <li>“不忘初心，牢记使命”专题</li>
+					 <li>“百年党史”专题</li>
+					 <li>“学习两会”专题</li>
+				 </ul>
+			  </li>
+			 </ul> </li>
+		   <li class="dropdown first-nav"><span>党群工作<i class="icon icon-arrow"></i></span>
+			 <ul class="sec-nav">
+			  <li><a href="#">党建动态</a></li>
+			  <li><a href="#">反腐倡廉</a></li>
+			  <li><a href="#">工会教代会</a></li>
+			  <li><a href="#">青年在线</a></li>
+			 
+			 
+			 </ul> </li>
+		   <li class="dropdown first-nav"><span>学院设置<i class="icon icon-arrow"></i></span>
+			 <ul class="sec-nav">
+			  <li><a href="#">其他教学科研机构</a>
+				 
+		      </li>
+			  <li><a href="#">学院</a>
+				 <ul class="third-nav">
+					 <li>经济管理学院</li>
+		
+				 </ul>
+		      </li>
+			  
+			 </ul> </li>
+		   <li class="dropdown  first-nav"><span>科学研究<i class="icon icon-arrow"></i></span>
+			 <ul class="sec-nav">
+			  <li><a href="#">主要研究方向</a></li>
+			  <li><a href="#">在研课题</a></li>
+			  <li><a href="#">科研成果</a></li>
+			 </ul> </li>
+		   <li class="dropdown  first-nav"><span>师资队伍<i class="icon icon-arrow"></i></span>
+			 <ul class="sec-nav">
+			  <li><a href="#">师资概况</a>
+				 
+		      </li>
+			  <li><a href="#">两院院士</a>
+				 
+		      </li>
+			  <li><a href="#">长江学者</a></li>
+			 </ul> </li>
+		   <li class="dropdown  first-nav"><span>招生就业<i class="icon icon-arrow"></i></span>
+			 <ul class="sec-nav">
+			  <li><a href="#">本科生招生</a>
+				
+			  </li>
+				 <li><a href="#">研究生招生</a></li>
+				 <li><a href="#">毕业生招生</a></li>
+			 </ul> </li>
+		   <li class="dropdown  first-nav"><span>国际交流<i class="icon icon-arrow"></i></span>
+			 <ul class="sec-nav">
+			  <li><a href="#">管理机构</a></li>
+			  <li><a href="#">因公临时出国</a></li>
+			  <li><a href="#">涉外事务报备</a></li>
+			  <li><a href="#">学生国际交流</a></li>
+			 </ul> </li>
+       </ul>
+      </div>
+  </div>
+  </body>
+</html>
