@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+$(".flip").click(function(){
+    $(".panel").slideToggle("slow");
+  });
+})
+
+
+</script>
+ 
+<style type="text/css"> 
+div.panel,p.flip
+{
+margin:0px;
+padding:5px;
+text-align:center;
+background:#2A1F1F;
+border:solid 1px #c3c3c3;
+}
+div.panel
+{
+height:100%;
+display:none;
+}
+.panel
+{
+display: flex;
+flex-wrap: wrap; 
+}
+.panel > div {
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.panel > div >img{
+  width: 200px;
+  margin: 10px;
+
+}
+.panel > img {
+  width: 200px;
+  margin: 20px;
+}
+	p{
+		color:white;
+		opacity:0.9;
+	    text-align:center
+	}
+
+</style>
+</head>
+ 
+<body background="../../../../web design/bizhi2.jpg">
+ 
+<div class="panel">
+<img src="../../../../web design/咖啡分类/阿芙佳多.png">
+<img src="../../../../web design/咖啡分类/爱尔兰咖啡.png">
+<img src="../../../../web design/咖啡分类/白咖啡.png">
+<img src="../../../../web design/咖啡分类/半拿铁.png">
+</div>
+<p class="flip" style="font-size:23px;color:white;opacity:0.8;text-align:center;">click here to choose coffee.</p>
+<div class="panel2">
+</div>
+</body>
+</html>

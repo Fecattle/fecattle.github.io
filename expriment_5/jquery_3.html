@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js">
+</script>
+<style type="text/css">
+body { font-size: 12px;text-align: center;}
+#tab {width: 500px;border: 1px solid #333;opacity:0.8;}
+#tab tr{line-height: 28px;}
+.tabelHeader {background-color: #333;color: #fff;}
+.even {background-color: #F7F7F7;}
+.odd {background-color: #FFFFF;}
+.hover {background-color: #71D2FF;}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+$("table>thead>tr").addClass("tabelHeader");
+$("table>tbody>tr:odd").addClass("odd");
+$("table>tbody>tr:even").addClass("even");
+$("table>tbody>tr").hover(function () {
+	$(this).toggleClass("hover");
+});
+})
+</script>
+</head>
+
+
+<body>
+<table id="tab" cellspacing="0" cellpadding="0">
+<thead>
+<tr><th>类别</th>
+<th>原料</th>
+<th>服务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>阿芙佳朵</td>
+<td>意式咖啡 冰淇淋</td>
+<td>
+<a href="">加热</a>|
+<a href="">续杯</a>
+</td>
+</tr>
+<tr>
+<td>爱尔兰咖啡</td>
+<td>黄糖 奶油</td>
+<td>
+<a href="">加热</a>|
+<a href="">续杯</a>
+</td>
+</tr>
+
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+
+</html>
